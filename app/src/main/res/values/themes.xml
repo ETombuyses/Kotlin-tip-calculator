@@ -12,5 +12,11 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+
+        <!-- !!!!!!! We can set the default style for all the following components
+            instead of applying the style on each element one by one -->
+        <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox</item>
+        <item name="radioButtonStyle">@style/Widget.TipCalculator.CompoundButton.RadioButton</item>
+        <item name="materialSwitchStyle">@style/Widget.TipCalculator.CompoundButton.MaterialSwitch</item>
     </style>
 </resources>

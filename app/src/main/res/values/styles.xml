@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.App" parent="Theme.Material3.Light">
-        ...
-        <item name="materialSwitchStyle">@style/Widget.App.Switch</item>
-    </style>
 
-    <style name="Widget.App.Switch" parent="Widget.Material3.CompoundButton.MaterialSwitch">
-        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Switch</item>
-    </style>
-
-    <style name="ThemeOverlay.App.Switch" parent="">
+    /** style for Switch button
+        parent = Material3
+    */
+    <style name="Widget.TipCalculator.CompoundButton.MaterialSwitch" parent="Widget.Material3.CompoundButton.MaterialSwitch">
         <item name="colorPrimary">@color/green</item>
         <item name="colorSurfaceVariant">@color/white</item>
         <item name="colorOutline">@color/green_dark</item>
@@ -17,5 +12,27 @@
         <item name="colorPrimaryContainer">@color/green_light</item>
         <item name="colorOnSurfaceVariant">@color/green_light</item>
         <item name="android:textSize">15dp</item>
+        <item name="android:minHeight">@dimen/min_text_height</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textAppearance">?attr/textAppearanceBody1</item>
+    </style>
+
+    /** style for TextView. name should be the parent where the source name is replaced by our app title
+        the default style is the parent, we inherit from the global attributes
+        but we custom them with our own specifications
+        parent = TextView style from MaterialComponents
+        our style = Widget.TipCalculator.TextView
+    */
+    <style name="Widget.TipCalculator.TextView" parent="Widget.MaterialComponents.TextView">
+        <item name="android:minHeight">@dimen/min_text_height</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textAppearance">?attr/textAppearanceBody1</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    /** radio button style*/
+    <style name="Widget.TipCalculator.CompoundButton.RadioButton" parent="Widget.Material3.CompoundButton.RadioButton">
+        <item name="android:textAppearance">?attr/textAppearanceBody1</item>
+        <item name="android:gravity">center_vertical</item>
     </style>
 </resources>

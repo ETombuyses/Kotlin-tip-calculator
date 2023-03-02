@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- File for common values used in styles // Sass variables
+     Each variable is called a "dimension" -> dimen
+-->
+<resources>
+    <dimen name="min_text_height">48dp</dimen>
+</resources>
