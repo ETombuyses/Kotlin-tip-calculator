@@ -1,16 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+
+
+    <style name="Widget.TipCalculator.CompoundButton.MaterialSwitch" parent="Widget.Material3.CompoundButton.MaterialSwitch">
+        <!-- material switch does need a materialThemeOverlay  otherwise the style will break -->
+        <item name="materialThemeOverlay">@style/ThemeOverlay.TipCalculator.Switch</item>
+    </style>
+
     /** style for Switch button
         parent = Material3
     */
-    <style name="Widget.TipCalculator.CompoundButton.MaterialSwitch" parent="Widget.Material3.CompoundButton.MaterialSwitch">
+    <style name="ThemeOverlay.TipCalculator.Switch" parent="">
+       <!-- selected button -->
         <item name="colorPrimary">@color/green</item>
-        <item name="colorSurfaceVariant">@color/white</item>
-        <item name="colorOutline">@color/green_dark</item>
         <item name="colorOnPrimary">@color/white</item>
         <item name="colorPrimaryContainer">@color/green_light</item>
+
+        <!-- unselected button -->
+        <item name="colorSurfaceVariant">@color/white</item>
+        <item name="colorOutline">@color/green_dark</item>
         <item name="colorOnSurfaceVariant">@color/green_light</item>
+
+        <!-- general -->
         <item name="android:textSize">15dp</item>
         <item name="android:minHeight">@dimen/min_text_height</item>
         <item name="android:gravity">center_vertical</item>
